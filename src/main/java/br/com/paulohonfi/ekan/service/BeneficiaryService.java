@@ -1,6 +1,7 @@
 package br.com.paulohonfi.ekan.service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class BeneficiaryService {
     }
 
     public Beneficiary findById(final Long id) {
-        return repository.findById(id).get();
+        return repository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
     public Beneficiary create(final Beneficiary beneficiary) {
@@ -31,7 +32,7 @@ public class BeneficiaryService {
     }
 
     public Beneficiary update(final Beneficiary beneficiary) {
-        final Beneficiary persisted = repository.findById(beneficiary.getId()).get();
+        final Beneficiary persisted = repository.findById(beneficiary.getId()).orElseThrow(NoSuchElementException::new);
         persisted.setBirthdate(beneficiary.getBirthdate());
         persisted.setName(beneficiary.getName());
         persisted.setPhone(beneficiary.getPhone());
@@ -41,11 +42,11 @@ public class BeneficiaryService {
     }
 
     public void delete(final Long id) {
-        final Beneficiary persisted = repository.findById(id).get();
+        final Beneficiary persisted = repository.findById(id).orElseThrow(NoSuchElementException::new);
 
         documentService.deleteAll(documentService.findByBeneficiary(persisted));
-        
+
         repository.delete(persisted);
     }
-    
+
 }

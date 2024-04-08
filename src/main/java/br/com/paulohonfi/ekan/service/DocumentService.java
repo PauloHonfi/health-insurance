@@ -2,6 +2,7 @@ package br.com.paulohonfi.ekan.service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class DocumentService {
     }
 
     public Document findById(final Long id) {
-        return repository.findById(id).get();
+        return repository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
     public List<Document> findByBeneficiary(final Beneficiary beneficiary) {
@@ -37,7 +38,7 @@ public class DocumentService {
     }
 
     public Document update(final Document document) {
-        final Document persisted = repository.findById(document.getId()).get();
+        final Document persisted = repository.findById(document.getId()).orElseThrow(NoSuchElementException::new);
         persisted.setDescription(document.getDescription());
         persisted.setDocumentType(document.getDocumentType());
         persisted.setUpdateDate(LocalDate.now());
