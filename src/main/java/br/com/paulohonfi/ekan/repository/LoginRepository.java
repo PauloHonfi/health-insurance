@@ -6,4 +6,5 @@ import br.com.paulohonfi.ekan.model.entity.Login;
 
 public interface LoginRepository extends JpaRepository<Login, Long> {
 
+    public Boolean existsByEmailAndPassword(final String email, final String password);
 }
