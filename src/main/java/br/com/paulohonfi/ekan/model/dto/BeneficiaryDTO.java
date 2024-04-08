@@ -1,6 +1,7 @@
 package br.com.paulohonfi.ekan.model.dto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import lombok.Data;
 
@@ -8,6 +9,7 @@ import lombok.Data;
 public class BeneficiaryDTO {
 
     private Long id;
+    private List<DocumentDTO> documents;
     private String name;
     private String phone;
     private LocalDate birthdate;

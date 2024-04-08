@@ -1,14 +1,16 @@
 package br.com.paulohonfi.ekan.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.paulohonfi.ekan.model.entity.Document;
+import br.com.paulohonfi.ekan.model.dto.DocumentDTO;
+import br.com.paulohonfi.ekan.model.mapper.DocumentMapper;
 import br.com.paulohonfi.ekan.service.DocumentService;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 
@@ -19,15 +21,16 @@ public class DocumentController {
 
 	private final DocumentService service;
 
-    @GetMapping
-	public String getDocument(HttpServletRequest request) {
-		final HttpSession session = request.getSession();
-				      
-		return "Funcionou";
+    private final DocumentMapper mapper;
+
+    @GetMapping("/{id}")
+	public DocumentDTO getDocument(@PathVariable final Long id) {
+		return mapper.entityToDto(service.findById(id));
 	}
 
-	@PostMapping
-	public Document create(final Document document) {
-		return service.create(document);
-	} 
+	@GetMapping("/beneficiary/{id}")
+	public List<DocumentDTO> getDocumentByBeneficiaryId(@PathVariable final Long id) {
+		return service.findByBeneficiaryId(id).stream().map( beneficiary ->
+			mapper.entityToDto(beneficiary)).collect(Collectors.toList());
+	}
 }

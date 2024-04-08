@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import br.com.paulohonfi.ekan.model.entity.Beneficiary;
 import br.com.paulohonfi.ekan.model.entity.Document;
 import br.com.paulohonfi.ekan.repository.DocumentRepository;
 import lombok.RequiredArgsConstructor;
@@ -23,13 +24,20 @@ public class DocumentService {
         return repository.findById(id).get();
     }
 
-    public Document create(final Document document) {
-        return repository.save(document);
+    public List<Document> findByBeneficiary(final Beneficiary beneficiary) {
+        return repository.findByBeneficiary(beneficiary);
+    }
+
+    public List<Document> findByBeneficiaryId(final Long id) {
+        return repository.findByBeneficiaryId(id);
+    }
+
+    public List<Document> createAll(final List<Document> documents) {
+        return repository.saveAll(documents);
     }
 
     public Document update(final Document document) {
         final Document persisted = repository.findById(document.getId()).get();
-        persisted.setBeneficiaries(document.getBeneficiaries());
         persisted.setDescription(document.getDescription());
         persisted.setDocumentType(document.getDocumentType());
         persisted.setUpdateDate(LocalDate.now());
@@ -39,5 +47,9 @@ public class DocumentService {
     public void delete(final Long id) {
         Document persisted = repository.findById(id).get();
         repository.delete(persisted);
+    }
+
+    public void deleteAll(final List<Document> documents) {
+        repository.deleteAll(documents);
     }
 }

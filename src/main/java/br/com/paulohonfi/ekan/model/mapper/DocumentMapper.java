@@ -4,17 +4,17 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-import br.com.paulohonfi.ekan.model.dto.BeneficiaryDTO;
-import br.com.paulohonfi.ekan.model.entity.Beneficiary;
+import br.com.paulohonfi.ekan.model.dto.DocumentDTO;
+import br.com.paulohonfi.ekan.model.entity.Document;
 
 @Mapper
-public interface BeneficiaryMapper {
+public interface DocumentMapper {
 
     DocumentMapper INSTANCE = Mappers.getMapper(DocumentMapper.class);
 
     @Mapping(target = "inclusionDate", ignore = true)
     @Mapping(target = "updateDate", ignore = true)
-    Beneficiary dtoToEntity(final BeneficiaryDTO dto);
+    Document dtoToEntity(final DocumentDTO dto);
 
-    BeneficiaryDTO entityToDto(final Beneficiary entity);
+    DocumentDTO entityToDto(final Document entity);
 }

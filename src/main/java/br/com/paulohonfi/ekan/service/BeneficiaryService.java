@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 public class BeneficiaryService {
 
     private final BeneficiaryRepository repository;
+    private final DocumentService documentService;
 
     public List<Beneficiary> findAll() {
         return repository.findAll();
@@ -23,7 +24,10 @@ public class BeneficiaryService {
     }
 
     public Beneficiary create(final Beneficiary beneficiary) {
-        return repository.save(beneficiary);
+        Beneficiary persisted = repository.save(beneficiary);
+        beneficiary.getDocuments().forEach((docs) -> docs.setBeneficiary(persisted));
+        beneficiary.setDocuments(documentService.createAll(beneficiary.getDocuments()));
+        return persisted;
     }
 
     public Beneficiary update(final Beneficiary beneficiary) {
@@ -31,11 +35,16 @@ public class BeneficiaryService {
         persisted.setBirthdate(beneficiary.getBirthdate());
         persisted.setName(beneficiary.getName());
         persisted.setPhone(beneficiary.getPhone());
+
+        beneficiary.getDocuments().forEach(documentService::update);
         return repository.save(persisted);
     }
 
     public void delete(final Long id) {
-        Beneficiary persisted = repository.findById(id).get();
+        final Beneficiary persisted = repository.findById(id).get();
+
+        documentService.deleteAll(documentService.findByBeneficiary(persisted));
+        
         repository.delete(persisted);
     }
     
