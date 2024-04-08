@@ -12,8 +12,7 @@ public interface BeneficiaryMapper {
 
     DocumentMapper INSTANCE = Mappers.getMapper(DocumentMapper.class);
 
-    @Mapping(target = "inclusionDate", ignore = true)
-    @Mapping(target = "updateDate", ignore = true)
+    @Mapping(source = "documents", target = "documents")
     Beneficiary dtoToEntity(final BeneficiaryDTO dto);
 
     BeneficiaryDTO entityToDto(final Beneficiary entity);
