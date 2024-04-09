@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Ekan",
-    "dateExported": "2024-04-08T15:47:54.283Z",
+    "dateExported": "2024-04-09T00:23:40.492Z",
     "version": "1.1",
     "folders": [
         {
@@ -17,6 +17,13 @@
             "containerId": "",
             "created": "2024-04-06T00:01:03.334Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "61a8ef9e-5264-4089-b9a4-5005961cb641",
+            "name": "Login",
+            "containerId": "",
+            "created": "2024-04-08T22:24:47.011Z",
+            "sortNum": 30000
         }
     ],
     "requests": [
@@ -29,7 +36,7 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-04-05T23:24:24.292Z",
-            "modified": "2024-04-08T15:24:56.090Z",
+            "modified": "2024-04-08T17:03:18.947Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -49,6 +56,25 @@
             "tests": []
         },
         {
+            "_id": "52b7081a-7515-4748-8011-00d47b337063",
+            "colId": "bd4bf424-993d-4c1b-94bf-4e92a91c5a3a",
+            "containerId": "61a8ef9e-5264-4089-b9a4-5005961cb641",
+            "name": "Login",
+            "url": "http://localhost:8080/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-08T22:24:39.330Z",
+            "modified": "2024-04-08T23:48:28.205Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"paulo@ekan.com.br\",\n  \"password\": \"1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
             "_id": "eb33d98e-edaa-4803-94de-f01da5649706",
             "colId": "bd4bf424-993d-4c1b-94bf-4e92a91c5a3a",
             "containerId": "4f617df7-91be-424c-9e19-20c4742415eb",
@@ -57,9 +83,13 @@
             "method": "GET",
             "sortNum": 15000,
             "created": "2024-04-06T00:54:13.030Z",
-            "modified": "2024-04-06T00:54:32.868Z",
+            "modified": "2024-04-09T00:21:16.931Z",
             "headers": [],
             "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjYyMjY2NX0.2-Sp0hZ0us2n6CmeNIa1NXHixWZgPwd9JuTytDOCAfg"
+            },
             "tests": []
         },
         {
@@ -85,13 +115,17 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-04-05T23:25:50.676Z",
-            "modified": "2024-04-08T13:51:18.770Z",
+            "modified": "2024-04-09T00:21:43.630Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"name\": \"Paulo Honfi\",\n  \"phone\": \"11 98521-4785\",\n  \"birthdate\": \"1984-03-16\",\n  \"documents\": [\n    {\n      \"documentType\": \"CPF\",\n      \"description\": \"123.456.789-09\"\n    }\n  ]\n}",
                 "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjYyMjY2NX0.2-Sp0hZ0us2n6CmeNIa1NXHixWZgPwd9JuTytDOCAfg"
             },
             "tests": []
         },

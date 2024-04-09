@@ -16,7 +16,10 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        repository.save(new Login("paulo@ekan.com.br", "1234"));
+        final Login login = new Login();
+        login.setUsername("paulo@ekan.com.br");
+        login.setPassword("$2a$10$JgcK3lym6xK2qELud4sKce8lLd.9RCVNTPHaZi.mizyj1qNuhEnWm");
+        repository.save(login);
     }
 
 }
