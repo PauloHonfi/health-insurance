@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Ekan",
-    "dateExported": "2024-04-09T00:23:40.492Z",
+    "dateExported": "2024-04-09T17:24:50.389Z",
     "version": "1.1",
     "folders": [
         {
@@ -36,9 +36,13 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-04-05T23:24:24.292Z",
-            "modified": "2024-04-08T17:03:18.947Z",
+            "modified": "2024-04-09T17:22:14.489Z",
             "headers": [],
             "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
+            },
             "tests": []
         },
         {
@@ -46,13 +50,17 @@
             "colId": "bd4bf424-993d-4c1b-94bf-4e92a91c5a3a",
             "containerId": "83f44772-59ea-4104-8720-08cd2e3ff5cb",
             "name": "Get by id",
-            "url": "http://localhost:8080/document/1",
+            "url": "http://localhost:8080/document/2",
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-04-06T00:01:08.997Z",
-            "modified": "2024-04-06T00:01:26.411Z",
+            "modified": "2024-04-09T17:23:40.756Z",
             "headers": [],
             "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
+            },
             "tests": []
         },
         {
@@ -83,12 +91,12 @@
             "method": "GET",
             "sortNum": 15000,
             "created": "2024-04-06T00:54:13.030Z",
-            "modified": "2024-04-09T00:21:16.931Z",
+            "modified": "2024-04-09T17:22:04.381Z",
             "headers": [],
             "params": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjYyMjY2NX0.2-Sp0hZ0us2n6CmeNIa1NXHixWZgPwd9JuTytDOCAfg"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
             },
             "tests": []
         },
@@ -101,9 +109,13 @@
             "method": "GET",
             "sortNum": 15000,
             "created": "2024-04-08T13:32:01.673Z",
-            "modified": "2024-04-08T13:34:00.457Z",
+            "modified": "2024-04-09T17:23:50.764Z",
             "headers": [],
             "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
+            },
             "tests": []
         },
         {
@@ -115,7 +127,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-04-05T23:25:50.676Z",
-            "modified": "2024-04-09T00:21:43.630Z",
+            "modified": "2024-04-09T17:22:22.733Z",
             "headers": [],
             "params": [],
             "body": {
@@ -125,7 +137,7 @@
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjYyMjY2NX0.2-Sp0hZ0us2n6CmeNIa1NXHixWZgPwd9JuTytDOCAfg"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
             },
             "tests": []
         },
@@ -138,13 +150,17 @@
             "method": "PUT",
             "sortNum": 25000,
             "created": "2024-04-08T13:51:50.489Z",
-            "modified": "2024-04-08T15:04:46.222Z",
+            "modified": "2024-04-09T17:22:53.756Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"id\": 1,\n  \"name\": \"Paulo Honfi ALTERADO\",\n  \"phone\": \"11 98521-4785\",\n  \"birthdate\": \"1984-03-16\",\n  \"documents\": [\n    {\n      \"id\": 1,\n      \"documentType\": \"CPF 2\",\n      \"description\": \"123.456.789-09\"\n    }\n  ]\n}",
                 "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
             },
             "tests": []
         },
@@ -157,9 +173,13 @@
             "method": "DELETE",
             "sortNum": 30000,
             "created": "2024-04-08T13:49:30.634Z",
-            "modified": "2024-04-08T15:05:10.147Z",
+            "modified": "2024-04-09T17:23:19.445Z",
             "headers": [],
             "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCZW5lZmljaWFyeSIsInN1YiI6InBhdWxvQGVrYW4uY29tLmJyIiwiaWQiOjEsImV4cCI6MTcxMjY4MzkxNH0.pgaKpR_5ZiIn6cn1EjSNvpdN071Mca_3_SuBrcgywjA"
+            },
             "tests": []
         }
     ]
